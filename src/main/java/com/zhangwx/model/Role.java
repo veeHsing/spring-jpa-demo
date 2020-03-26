@@ -17,11 +17,6 @@ public class Role {
     private String rname;
 
     @ManyToMany(targetEntity = User.class,mappedBy = "roles")
-//    @JoinTable(name = "role_user",joinColumns = {
-//            @JoinColumn(name = "sys_role_id",referencedColumnName = "rid"),
-//    },inverseJoinColumns = {
-//            @JoinColumn(name = "sys_user_id",referencedColumnName = "id")
-//    } )
     private List<User> users = new ArrayList<>();
 
     public int getRid() {
